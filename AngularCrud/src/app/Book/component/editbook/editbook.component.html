@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <label><strong>Id:</strong></label><br>
+    <input type="text" name="id" value="{{book.id}}" [(ngModel)]="book.id" readonly>
+    <br>
+    <label><strong>Name:</strong></label><br>
+    <input type="text" name="name" value="{{book.name}}" [(ngModel)]="book.name">
+    <br>
+    <label><strong>Author:</strong></label><br>
+    <input type="text" name="author" value="{{book.author}}" [(ngModel)]="book.author">
+    <br>
+    <br>
+    <button routerLink="/booklist" class="btn btn-info" (click)="updateUser()">Update</button>
+</div>

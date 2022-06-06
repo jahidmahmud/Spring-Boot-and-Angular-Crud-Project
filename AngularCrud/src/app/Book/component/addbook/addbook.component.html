@@ -1,0 +1,28 @@
+<!-- <div class="container mt-5">
+    <form>
+        <label><strong>Id:</strong></label><br>
+        <input type="text" name="id" />
+        <br>
+        <label><strong>Name:</strong></label><br>
+        <input type="text" name="name" />
+        <br>
+        <label><strong>Author:</strong></label><br>
+        <input type="text" name="author" />
+        <br>
+        <br>
+        <button class="btn btn-info" type="submit">add</button>
+        <button routerLink="/booklist" class="btn btn-success">Back</button>
+    </form>
+</div> -->
+
+<div class="container mt-5">
+    <form *ngIf="userForm">
+        <h2>Add New Book</h2>
+        <p>Id<br /> <input type="number" name="id" [(ngModel)]="newBook.id" /></p>
+        <p>Name: <br /><input type="text" name="name" [(ngModel)]="newBook.name" /></p>
+        <p>Author: <br /><input type="text" name="author" [(ngModel)]="newBook.author" /></p>
+        <p>
+            <button type="button" class="btn btn-primary mr-2" (click)="saveBook()" routerLink="/booklist">Submit</button>
+        </p>
+    </form>
+</div>
